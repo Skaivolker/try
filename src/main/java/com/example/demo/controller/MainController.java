@@ -11,8 +11,5 @@ public class MainController {
         return "index";
     }
 
-    @GetMapping
-    public String getNews(){
-        return "news";
-    }
+
 }

@@ -1,4 +1,7 @@
 package com.example.demo.repository;
 
-public class NewsRepo {
+import com.example.demo.model.News;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface NewsRepo extends JpaRepository<News, Long> {
 }
