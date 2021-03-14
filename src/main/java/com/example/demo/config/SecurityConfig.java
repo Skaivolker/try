@@ -15,7 +15,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/news").authenticated()
                 .anyRequest().permitAll()
                 .and()
-                .formLogin();
+                .formLogin()
+                .loginPage("/login").permitAll()
+                .and()
+                .exceptionHandling().accessDeniedPage("/unauthorised");
+
     }
 
     @Override
