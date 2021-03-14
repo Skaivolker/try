@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+For admin only.
+<a href="/" th:href="@{/login}">Login here</a>
+<a href="/" th:href="@{/news}">News</a>
+<br/>
+<form th:action="@{/news/create}" th:object="${newNews}" method="post">
+    <label>News Text</label>
+    <input th:field="${newNews.text}" type="text"/>
+    <input type="submit"/>
+</form>
+</body>
+</html>
